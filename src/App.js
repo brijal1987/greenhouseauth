@@ -13,7 +13,6 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 
 import axios from "axios";
-import $ from "jquery";
 
 class App extends Component {
 
@@ -46,11 +45,6 @@ class App extends Component {
  };
 
   _loginUser = (email, password) => {
-    $("#login-form button")
-      .attr("disabled", "disabled")
-      .html(
-        '<i class="fa fa-spinner fa-spin fa-1x fa-fw"></i><span class="sr-only">Loading...</span>'
-      );
     var formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
@@ -63,7 +57,6 @@ class App extends Component {
       })
       .then(json => {
         if (json.data.success) {
-          alert("Login Successful!");
 
           let userData = {
             name: json.data.data.name,
@@ -83,26 +76,13 @@ class App extends Component {
             user: appState.user
           });
         } else alert("Login Failed!");
-
-        $("#login-form button")
-          .removeAttr("disabled")
-          .html("Login");
       })
       .catch(error => {
         alert(`An Error Occured! ${error}`);
-        $("#login-form button")
-          .removeAttr("disabled")
-          .html("Login");
       });
   };
 
   _registerUser = (name, email, password) => {
-    $("#email-login-btn")
-    .attr("disabled", "disabled")
-    .html(
-    '<i class="fa fa-spinner fa-spin fa-1x fa-fw"></i><span class="sr-only">Loading...</span>'
-    );
-
     var formData = new FormData(); 
     formData.append("password", password);
     formData.append("email", email);
@@ -116,7 +96,6 @@ class App extends Component {
     })
     .then(json => {
     if (json.data.success) {
-        alert(`Registration Successful!`);
 
         let userData = {
         name: json.data.data.name,
@@ -136,18 +115,11 @@ class App extends Component {
         user: appState.user
         });
     } else {
-        alert(`Registration Failed!`);
-        $("#email-login-btn")
-        .removeAttr("disabled")
-        .html("Register");
     }
     })
     .catch(error => {
     alert("An Error Occured!" + error);
     console.log(`${formData} ${error}`);
-    $("#email-login-btn")
-        .removeAttr("disabled")
-        .html("Register");
     });
   };
 
