@@ -1,0 +1,35 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+li {
+  float: left;
+  margin: 10px;
+}
+
+li a {
+  display: block;
+  color: #726F6C;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+li a.active, li a:hover {
+  background-color: #1A304C;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+.welcome-message {
+  float: right;
+  h2{
+    color: #3292FF;
+  }
+}

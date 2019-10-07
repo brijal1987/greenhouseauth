@@ -1,0 +1,42 @@
+body {
+  font-size: 35px;
+  background-color: #ccc;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.box {
+  padding: 0 15px 0 15px;
+}
+.box .inner {
+  background-color: #fff;
+}
+.App {
+  padding: 5px;
+}
+.inner {
+  background-color: #fff;
+  padding: 25px;
+  color: #3292FF;
+}
+.content h2 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.content label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.content a {
+  font-size: 13px;
+  color: #3292FF;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.content a.active, .content a:hover {
+  font-size: 13px;
+  text-decoration: none;
+  border-radius: 5px;
+}
